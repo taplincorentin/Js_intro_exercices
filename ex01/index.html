@@ -16,6 +16,14 @@
 
         const container = document.querySelector("#container")
         container.appendChild(box)
+        box.innerText = "text in a box"
+
+        box.addEventListener("click",function(){
+            alert("Class name : " + box.className);
+        })
+        
+       
+        
     </script>
 </body>
 </html>
