@@ -1,0 +1,14 @@
+.box{
+    width: 75px;
+    height: 75px;
+    border: 1px solid black;
+    background-color: rgb(212,250,76);
+    font-size: 3em;
+    text-align: center;
+    line-height: 75px;
+    margin: 5px;
+    animation: appear 1s;
+    border-radius: 6px;
+    cursor: pointer;
+    
+}
