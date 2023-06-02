@@ -1,0 +1,23 @@
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+td{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    border: 2px solid black;
+}
+
+.X{
+    font-size: 120px;
+    color: green;
+}
+
+.O{
+    font-size: 120px;
+    color: red;
+}
