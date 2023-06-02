@@ -6,10 +6,6 @@
     font-size: 4em;
     font-family: "Times New Roman", Times, serif;
     text-align: center;
-    line-height: 75px;
-    margin: 5px;
-    animation: appear 1s;
-    border-radius: 6px;
     cursor: pointer;
     
 }
