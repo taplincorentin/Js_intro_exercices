@@ -1,9 +1,10 @@
 .box{
+    display: flex;
     width: 200px;
     height: 200px;
-    border: 1px solid black;
-    background-color: rgb(212,250,76);
+    background-color: green;
     font-size: 4em;
+    font-family: "Times New Roman", Times, serif;
     text-align: center;
     line-height: 75px;
     margin: 5px;
