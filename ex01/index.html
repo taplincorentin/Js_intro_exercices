@@ -18,8 +18,17 @@
         container.appendChild(box)
         box.innerText = "text in a box"
 
+        //variables for each information to make our alert call easier to read
+        //The getComputedStyle() method gets the computed CSS properties and values of an HTML element.
+        let backColor = window.getComputedStyle(box).backgroundColor 
+        let color = window.getComputedStyle(box).color
+        let width = box.offsetWidth;
+        let height = box.offsetHeight;
+        let display = window.getComputedStyle(box).display
+        let font = window.getComputedStyle(box).fontFamily
+        let fonts = window.getComputedStyle(box).fontSize
         box.addEventListener("click",function(){
-            alert("Class name : " + box.className);
+            alert("Class name : " + box.className +" \nBackground color : "+ backColor+"\nColor : "+ color+"\nHeight : "+height+"\nWidth : "+ width+"\nDisplay : "+display+"\nFont : "+font+" ("+fonts+")");
         })
         
        
