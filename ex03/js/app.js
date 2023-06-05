@@ -1,7 +1,7 @@
 function isGameOver(){
   let nbFilledCell = 0;
   for (let y=1; y <= 9; y++) {       
-        if (document.getElementById(y).innerHTML === "X" ||document.getElementById(y).innerHTML === "O") { 
+        if (document.getElementById(y.toString()).innerHTML === "X" ||document.getElementById(y.toString()).innerHTML === "O") { 
           nbFilledCell += 1;
         }
   }
@@ -18,7 +18,7 @@ for (let i=1; i <= 9; i++) {
             this.innerHTML = symbol;      //add symbol in cell
             this.classList.add(symbol);   //add symbol style
 
-            if(isGameOver()){document.getElementById("turn").innerHTML = "END";  }
+            if(isGameOver()){document.getElementById("turn").innerHTML = "Game is finished";  }
             if (symbol === "X"){symbol = "O"} //change symbol after every turn
             else{symbol = "X"}
             document.getElementById("turn").innerHTML = "Its "+symbol+" turn";  
