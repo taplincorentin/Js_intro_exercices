@@ -3,9 +3,10 @@ function isGameOver(){
   for (let y=1; y <= 9; y++) {       
         if (document.getElementById(y.toString()).innerHTML === "X" ||document.getElementById(y.toString()).innerHTML === "O") { 
           nbFilledCell += 1;
+          console.log(nbFilledCell)
         }
   }
-  if (nbFilledCell==9){return true;}
+  if (nbFilledCell===9){return true;}
   else {return false;}
 }
 
