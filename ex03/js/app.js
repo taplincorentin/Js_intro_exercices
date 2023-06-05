@@ -1,18 +1,27 @@
-let symbol = "X";
-let i=1; //initialize i (started cell id at 1 in html)
+function isGameOver(){
+  let nbFilledCell = 0;
+  for (let y=1; y <= 9; y++) {       
+        if (document.getElementById(y).innerHTML === "X" ||document.getElementById(y).innerHTML === "O") { 
+          nbFilledCell += 1;
+        }
+  }
+  if (nbFilledCell==9){return true;}
+  else {return false;}
+}
 
-//for every cell in table get element id from html(toString)
-for ( i; i <= 9; i++) {       
+let symbol = "X";
+
+//for every cell in table get element id from html(toString)(i== cell id from html)
+for (let i=1; i <= 9; i++) {       
     document.getElementById(i.toString()).addEventListener("click", function(){
         if (this.innerHTML === "") {    //check that cell is empty
-          this.innerHTML = symbol;      //add symbol in cell
-          this.classList.add(symbol);   //add symbol style
+            this.innerHTML = symbol;      //add symbol in cell
+            this.classList.add(symbol);   //add symbol style
 
-
-        if (symbol === "X"){symbol = "O"} //change symbol after every turn
-        else{symbol = "X"}
+            if(isGameOver()){document.getElementById("turn").innerHTML = "END";  }
+            if (symbol === "X"){symbol = "O"} //change symbol after every turn
+            else{symbol = "X"}
+            document.getElementById("turn").innerHTML = "Its "+symbol+" turn";  
         }
-    });
-
-    
+    }); 
 }
