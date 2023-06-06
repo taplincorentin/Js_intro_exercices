@@ -1,0 +1,25 @@
+*{
+    background-color: aquamarine;
+}
+
+h1{
+    text-align: center;
+}
+#convertor{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+}
+
+#error{
+    font-size: 30px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    color : red;
+}
+
+h2 {
+    text-align: center;
+}
