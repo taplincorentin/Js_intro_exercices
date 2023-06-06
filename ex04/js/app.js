@@ -2,10 +2,6 @@ function randomColor(){
     return Math.floor(Math.random()*256);
 }
 
-function boxToBlack(){
-    
-}
-
  
 function createBox(){
     const newbox = box.cloneNode()
@@ -17,18 +13,16 @@ function createBox(){
     container.appendChild(newbox)
     newbox.id = 'box'+count
     
+    
     newbox.addEventListener("click",function(){
-        newbox.style.backgroundColor = "black";
-    });
-    
-    /*clickedBox = document.getElementById('box'+count.toString());
-    clickedBox.addEventListener("click",function(){
-            clickedBox.style.backgroundColor = "black";
-    });*/
-}
 
-    
-    
+        if(container.childElementCount >225){ 
+
+        newbox.style.backgroundColor = "black";
+
+        }
+    });
+} 
 
 
 function deleteBox(){
@@ -36,7 +30,7 @@ function deleteBox(){
 }
 
 
-const container = document.querySelector("#container")
+const container = document.getElementById("container")
 const box = document.createElement("div")
 box.classList.add("box")
 
@@ -55,5 +49,6 @@ document.addEventListener("keydown", function(event) {
         }
     }   
 });
+
 
 
